@@ -1,0 +1,2 @@
+{"level":"info","message":"Post obtido com sucesso em http://localhost:3042/posts?_page=1&_per_page=6","service":"user-service"}
+{"level":"info","message":"Post obtido com sucesso em http://localhost:3042/posts/?slug=introducao-ao-react","service":"user-service"}
