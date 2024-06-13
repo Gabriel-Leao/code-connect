@@ -16,21 +16,19 @@ export const metadata: Metadata = {
   authors: [{ name: 'Gabriel Leão', url: 'https://github.com/Gabriel-Leao' }]
 }
 
-export default function RootLayout ({
-                                      children
-                                    }: Readonly<{
+export default function RootLayout({
+  children
+}: Readonly<{
   children: ReactNode
 }>) {
   return (
     <html lang="pt-BR">
-    <body className={ prompt.className }>
-    <div className="container xl:justify-center mx-auto gap-x-7 flex min-h-screen max-h-fit my-14">
-      <Aside />
-      <div className="xl:w-[995px]">
-        { children }
-      </div>
-    </div>
-    </body>
+      <body className={prompt.className}>
+        <div className="container xl:justify-center mx-auto gap-x-7 flex min-h-screen max-h-fit my-14">
+          <Aside />
+          <div className="xl:w-[995px]">{children}</div>
+        </div>
+      </body>
     </html>
   )
 }

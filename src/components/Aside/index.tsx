@@ -8,10 +8,10 @@ const Aside = () => {
         <Image
           src="/logo.svg"
           alt="logo da code connect"
-          width={ 127 }
-          height={ 40 }
-          style={ { width: '127px', height: '40px' } }
-          priority={ true }
+          width={127}
+          height={40}
+          style={{ width: '127px', height: '40px' }}
+          priority={true}
         />
       </Link>
     </aside>
