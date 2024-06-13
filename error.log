@@ -1,0 +1,14 @@
+{"level":"error","message":"\nInvalid `prisma.post.findMany()` invocation:\n\n\nToo many database connections opened: FATAL: remaining connection slots are reserved for azure replication users","service":"user-service"}
+{"level":"error","message":"\nInvalid `prisma.post.findMany()` invocation:\n\n\nToo many database connections opened: FATAL: remaining connection slots are reserved for azure replication users","service":"user-service"}
+{"level":"error","message":"\nInvalid `prisma.post.findMany()` invocation:\n\n\nToo many database connections opened: FATAL: remaining connection slots are reserved for azure replication users\nPrisma Accelerate has built-in connection pooling to prevent such errors: https://pris.ly/client/error-accelerate","service":"user-service"}
+{"level":"error","message":"\nInvalid `prisma.post.findMany()` invocation:\n\n\nToo many database connections opened: FATAL: remaining connection slots are reserved for azure replication users","service":"user-service"}
+{"level":"error","message":"\nInvalid `prisma.post.findMany()` invocation:\n\n\nToo many database connections opened: FATAL: remaining connection slots are reserved for azure replication users","service":"user-service"}
+{"level":"error","message":"\nInvalid `prisma.post.findMany()` invocation:\n\n\nToo many database connections opened: FATAL: remaining connection slots are reserved for azure replication users","service":"user-service"}
+{"level":"error","message":"\nInvalid `prisma.post.findMany()` invocation:\n\n\nToo many database connections opened: FATAL: remaining connection slots are reserved for azure replication users","service":"user-service"}
+{"level":"error","message":"\nInvalid `prisma.post.findMany()` invocation:\n\n\nToo many database connections opened: FATAL: remaining connection slots are reserved for azure replication users","service":"user-service"}
+{"level":"error","message":"\nInvalid `prisma.post.findMany()` invocation:\n\n\nToo many database connections opened: FATAL: remaining connection slots are reserved for azure replication users","service":"user-service"}
+{"level":"error","message":"\nInvalid `prisma.post.findMany()` invocation:\n\n\nToo many database connections opened: FATAL: remaining connection slots are reserved for azure replication users","service":"user-service"}
+{"level":"error","message":"No Post found","service":"user-service"}
+{"level":"error","message":"No Post found","service":"user-service"}
+{"level":"error","message":"No Post found","service":"user-service"}
+{"level":"error","message":"No Post found","service":"user-service"}

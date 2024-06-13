@@ -1,43 +1,45 @@
-import { remark } from 'remark'
-import html from 'remark-html'
 import CardPost, { Post } from '@/components/CardPost'
 import logger from '@/logger'
+import prisma from '../../../../prisma/prisma'
+import { remark } from 'remark'
+import html from 'remark-html'
 
 const getPost = async (slug: string): Promise<Post | null> => {
-  const response = await fetch(`http://localhost:3042/posts/?slug=${slug}`)
-  if (!response.ok) {
-    logger.error(`Ocorreu um erro em ${response.url}: ${await response.text()}`)
+  try {
+    const post = await prisma.post.findUniqueOrThrow({
+      where: { slug },
+      include: { author: true }
+    })
+    logger.info(`post com o slug: ${ slug } encontrado com sucessor`)
+    const processedContent = await remark().use(html).process(post.markdown)
+    post.markdown = processedContent.toString()
+    return post
+  } catch (error: any) {
+    logger.error(error.message)
     return null
   }
-  logger.info(`Post obtido com sucesso em ${response.url}`)
-  const data = await response.json()
-  const post = data[0]
-
-  const processedContent = await remark().use(html).process(post.markdown)
-  post.markdown = processedContent.toString()
-  return post
 }
 
 const page = async ({ params }: { params: { slug: string } }) => {
   const post = await getPost(params.slug)
   return (
     <>
-      {post ? (
+      { post ? (
         <div>
           <CardPost
-            post={post}
-            detailsCard={true}
+            post={ post }
+            detailsCard={ true }
           />
           <h2 className="pb-2 pt-6 text-2xl text-[#888888]">Código:</h2>
           <div
             className="p-4 [&>pre>code]:text-[#BCBCBC] rounded-2xl bg-[#171d1f] [&>pre>code]:text-lg"
-            dangerouslySetInnerHTML={{ __html: post.markdown }}></div>
+            dangerouslySetInnerHTML={ { __html: post.markdown } }></div>
         </div>
       ) : (
-        <h1 className="text-2xl text-white">
+        <h1 className="text-2xl text-white text-center">
           Não foi possível encontrar o post
         </h1>
-      )}
+      ) }
     </>
   )
 }

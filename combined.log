@@ -1,2 +1,66 @@
-{"level":"info","message":"Post obtido com sucesso em http://localhost:3042/posts?_page=1&_per_page=6","service":"user-service"}
-{"level":"info","message":"Post obtido com sucesso em http://localhost:3042/posts/?slug=introducao-ao-react","service":"user-service"}
+{"level":"info","message":"Posts encontrados com sucesso","service":"user-service"}
+{"level":"info","message":"Posts encontrados com sucesso","service":"user-service"}
+{"level":"info","message":"Posts encontrados com sucesso","service":"user-service"}
+{"level":"info","message":"post com o slug: webpack-um-guia-para-iniciantes encontrado com sucessor","service":"user-service"}
+{"level":"info","message":"Posts encontrados com sucesso","service":"user-service"}
+{"level":"info","message":"Posts encontrados com sucesso","service":"user-service"}
+{"level":"info","message":"Posts encontrados com sucesso","service":"user-service"}
+{"level":"info","message":"Posts encontrados com sucesso","service":"user-service"}
+{"level":"info","message":"Posts encontrados com sucesso","service":"user-service"}
+{"level":"info","message":"Posts encontrados com sucesso","service":"user-service"}
+{"level":"info","message":"Posts encontrados com sucesso","service":"user-service"}
+{"level":"info","message":"Posts encontrados com sucesso","service":"user-service"}
+{"level":"info","message":"Posts encontrados com sucesso","service":"user-service"}
+{"level":"info","message":"Posts encontrados com sucesso","service":"user-service"}
+{"level":"info","message":"post com o slug: webpack-um-guia-para-iniciantes encontrado com sucessor","service":"user-service"}
+{"level":"info","message":"post com o slug: gerenciamento-de-estado-com-redux encontrado com sucessor","service":"user-service"}
+{"level":"info","message":"Posts encontrados com sucesso","service":"user-service"}
+{"level":"info","message":"Posts encontrados com sucesso","service":"user-service"}
+{"level":"info","message":"Posts encontrados com sucesso","service":"user-service"}
+{"level":"info","message":"Posts encontrados com sucesso","service":"user-service"}
+{"level":"info","message":"Posts encontrados com sucesso","service":"user-service"}
+{"level":"info","message":"Posts encontrados com sucesso","service":"user-service"}
+{"level":"info","message":"Posts encontrados com sucesso","service":"user-service"}
+{"level":"info","message":"Posts encontrados com sucesso","service":"user-service"}
+{"level":"info","message":"Posts encontrados com sucesso","service":"user-service"}
+{"level":"info","message":"Posts encontrados com sucesso","service":"user-service"}
+{"level":"info","message":"Posts encontrados com sucesso","service":"user-service"}
+{"level":"info","message":"Posts encontrados com sucesso","service":"user-service"}
+{"level":"info","message":"Posts encontrados com sucesso","service":"user-service"}
+{"level":"info","message":"Posts encontrados com sucesso","service":"user-service"}
+{"level":"info","message":"Posts encontrados com sucesso","service":"user-service"}
+{"level":"info","message":"Posts encontrados com sucesso","service":"user-service"}
+{"level":"info","message":"Posts encontrados com sucesso","service":"user-service"}
+{"level":"info","message":"Posts encontrados com sucesso","service":"user-service"}
+{"level":"info","message":"Posts encontrados com sucesso","service":"user-service"}
+{"level":"info","message":"Posts encontrados com sucesso","service":"user-service"}
+{"level":"info","message":"Posts encontrados com sucesso","service":"user-service"}
+{"level":"info","message":"Posts encontrados com sucesso","service":"user-service"}
+{"level":"info","message":"Posts encontrados com sucesso","service":"user-service"}
+{"level":"info","message":"Posts encontrados com sucesso","service":"user-service"}
+{"level":"info","message":"Posts encontrados com sucesso","service":"user-service"}
+{"level":"info","message":"Posts encontrados com sucesso","service":"user-service"}
+{"level":"info","message":"Posts encontrados com sucesso","service":"user-service"}
+{"level":"info","message":"Posts encontrados com sucesso","service":"user-service"}
+{"level":"info","message":"Posts encontrados com sucesso","service":"user-service"}
+{"level":"info","message":"Posts encontrados com sucesso","service":"user-service"}
+{"level":"error","message":"\nInvalid `prisma.post.findMany()` invocation:\n\n\nToo many database connections opened: FATAL: remaining connection slots are reserved for azure replication users","service":"user-service"}
+{"level":"error","message":"\nInvalid `prisma.post.findMany()` invocation:\n\n\nToo many database connections opened: FATAL: remaining connection slots are reserved for azure replication users","service":"user-service"}
+{"level":"info","message":"Posts encontrados com sucesso","service":"user-service"}
+{"level":"error","message":"\nInvalid `prisma.post.findMany()` invocation:\n\n\nToo many database connections opened: FATAL: remaining connection slots are reserved for azure replication users\nPrisma Accelerate has built-in connection pooling to prevent such errors: https://pris.ly/client/error-accelerate","service":"user-service"}
+{"level":"error","message":"\nInvalid `prisma.post.findMany()` invocation:\n\n\nToo many database connections opened: FATAL: remaining connection slots are reserved for azure replication users","service":"user-service"}
+{"level":"error","message":"\nInvalid `prisma.post.findMany()` invocation:\n\n\nToo many database connections opened: FATAL: remaining connection slots are reserved for azure replication users","service":"user-service"}
+{"level":"error","message":"\nInvalid `prisma.post.findMany()` invocation:\n\n\nToo many database connections opened: FATAL: remaining connection slots are reserved for azure replication users","service":"user-service"}
+{"level":"error","message":"\nInvalid `prisma.post.findMany()` invocation:\n\n\nToo many database connections opened: FATAL: remaining connection slots are reserved for azure replication users","service":"user-service"}
+{"level":"error","message":"\nInvalid `prisma.post.findMany()` invocation:\n\n\nToo many database connections opened: FATAL: remaining connection slots are reserved for azure replication users","service":"user-service"}
+{"level":"error","message":"\nInvalid `prisma.post.findMany()` invocation:\n\n\nToo many database connections opened: FATAL: remaining connection slots are reserved for azure replication users","service":"user-service"}
+{"level":"error","message":"\nInvalid `prisma.post.findMany()` invocation:\n\n\nToo many database connections opened: FATAL: remaining connection slots are reserved for azure replication users","service":"user-service"}
+{"level":"info","message":"Posts encontrados com sucesso","service":"user-service"}
+{"level":"info","message":"Posts encontrados com sucesso","service":"user-service"}
+{"level":"info","message":"post com o slug: introducao-ao-react encontrado com sucessor","service":"user-service"}
+{"level":"error","message":"No Post found","service":"user-service"}
+{"level":"error","message":"No Post found","service":"user-service"}
+{"level":"error","message":"No Post found","service":"user-service"}
+{"level":"info","message":"post com o slug: introducao-ao-react encontrado com sucessor","service":"user-service"}
+{"level":"error","message":"No Post found","service":"user-service"}
+{"level":"info","message":"Posts encontrados com sucesso","service":"user-service"}

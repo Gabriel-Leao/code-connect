@@ -3,14 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "concurrently \"next dev\" \" json-server posts.json -p 3042\n\"",
+    "dev": "next dev",
     "build": "next build",
-    "start": "concurrently \"next start\" \" json-server posts.json -p 3042\n\"",
+    "start": "next start",
     "lint": "next lint"
   },
+  "prisma": {
+    "seed": "node prisma/seed.js"
+  },
   "dependencies": {
-    "concurrently": "^8.2.2",
-    "json-server": "^1.0.0-beta.1",
+    "@prisma/client": "^5.15.0",
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
@@ -30,6 +32,7 @@
     "eslint-plugin-react": "^7.34.2",
     "postcss": "^8",
     "prettier": "^3.3.1",
+    "prisma": "^5.15.0",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }
