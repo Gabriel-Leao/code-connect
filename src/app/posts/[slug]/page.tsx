@@ -3,6 +3,7 @@ import logger from '@/logger'
 import prisma from '../../../../prisma/prisma'
 import { remark } from 'remark'
 import html from 'remark-html'
+import { redirect } from 'next/navigation'
 
 const getPost = async (slug: string): Promise<Post | null> => {
   try {
@@ -16,7 +17,7 @@ const getPost = async (slug: string): Promise<Post | null> => {
     return post
   } catch (error) {
     logger.error(error)
-    return null
+    redirect('/not-found')
   }
 }
 
