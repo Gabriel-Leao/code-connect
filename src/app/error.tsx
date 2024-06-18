@@ -1,3 +1,5 @@
+'use client'
+
 import ErrorComponent from '@/components/Error'
 
 const Error = () => {

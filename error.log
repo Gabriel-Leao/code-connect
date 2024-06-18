@@ -18,3 +18,14 @@
 {"clientVersion":"5.15.0","code":"P2025","level":"error","name":"NotFoundError","service":"user-service"}
 {"clientVersion":"5.15.0","code":"P2025","level":"error","name":"NotFoundError","service":"user-service"}
 {"clientVersion":"5.15.0","code":"P2025","level":"error","name":"NotFoundError","service":"user-service"}
+{"clientVersion":"5.15.0","level":"error","name":"PrismaClientInitializationError","service":"user-service"}
+{"clientVersion":"5.15.0","level":"error","name":"PrismaClientInitializationError","service":"user-service"}
+{"clientVersion":"5.15.0","level":"error","name":"PrismaClientInitializationError","service":"user-service"}
+{"clientVersion":"5.15.0","level":"error","name":"PrismaClientInitializationError","service":"user-service"}
+{"clientVersion":"5.15.0","level":"error","name":"PrismaClientInitializationError","service":"user-service"}
+{"clientVersion":"5.15.0","level":"error","name":"PrismaClientInitializationError","service":"user-service"}
+{"clientVersion":"5.15.0","level":"error","name":"PrismaClientInitializationError","service":"user-service"}
+{"clientVersion":"5.15.0","level":"error","name":"PrismaClientInitializationError","service":"user-service"}
+{"clientVersion":"5.15.0","level":"error","name":"PrismaClientInitializationError","service":"user-service"}
+{"level":"error","service":"user-service"}
+{"level":"error","service":"user-service"}
