@@ -1,11 +1,11 @@
-import CardPost, { Post } from '@/components/CardPost'
+import CardPost, { PostWithAuthor } from '@/components/CardPost'
 import logger from '@/logger'
 import prisma from '../../../../prisma/prisma'
 import { remark } from 'remark'
 import html from 'remark-html'
 import { redirect } from 'next/navigation'
 
-const getPost = async (slug: string): Promise<Post | null> => {
+const getPost = async (slug: string): Promise<PostWithAuthor | null> => {
   try {
     const post = await prisma.post.findUniqueOrThrow({
       where: { slug },
