@@ -1,4 +1,4 @@
-import CardPost, { Post } from '@/components/CardPost'
+import CardPost, { PostWithAuthor } from '@/components/CardPost'
 import logger from '@/logger'
 import Link from 'next/link'
 import prisma from '../../prisma/prisma'
@@ -49,7 +49,7 @@ const Home = async ({
       {posts.length ? (
         <>
           <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 pb-14">
-            {posts.map((post: Post) => (
+            {posts.map((post: PostWithAuthor) => (
               <CardPost
                 post={post}
                 key={post.id}

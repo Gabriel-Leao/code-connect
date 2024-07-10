@@ -9,28 +9,47 @@ datasource db {
 
 model User {
   avatar     String
-  created_at DateTime @default(now())
-  email      String   @unique
-  id         String   @id @default(uuid())
+  created_at DateTime  @default(now())
+  email      String    @unique
+  id         String    @id @default(uuid())
   name       String
   posts      Post[]
-  updated_at DateTime @updatedAt
-  username   String   @unique
+  updated_at DateTime  @updatedAt
+  username   String    @unique
+  comments   Comment[]
 
   @@map("users")
 }
 
 model Post {
-  author     User     @relation(fields: [author_id], references: [id])
+  author     User      @relation(fields: [author_id], references: [id])
   author_id  String
-  created_at DateTime @default(now())
+  created_at DateTime  @default(now())
   body       String
+  comments   Comment[]
   cover      String
-  id         String   @id @default(uuid())
+  id         String    @id @default(uuid())
+  likes      Int       @default(0)
   markdown   String
-  slug       String   @unique
+  slug       String    @unique
   title      String
-  updated_at DateTime @updatedAt
+  updated_at DateTime  @updatedAt
 
   @@map("posts")
+}
+
+model Comment {
+  author     User      @relation(fields: [author_id], references: [id])
+  author_id  String
+  children   Comment[] @relation("CommentChildren")
+  created_at DateTime  @default(now())
+  id         String    @id @default(uuid())
+  parent     Comment?  @relation("CommentChildren", fields: [parent_id], references: [id])
+  parent_id  String?
+  post       Post      @relation(fields: [post_id], references: [id])
+  post_id    String
+  text       String
+  updated_at DateTime  @updatedAt
+
+  @@map("comments")
 }

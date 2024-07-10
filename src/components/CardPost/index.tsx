@@ -1,27 +1,22 @@
 import Image from 'next/image'
 import Avatar from '@/components/Avatar'
 import Link from 'next/link'
+import { incrementThumbsUp } from '@/actions'
+import { Post, User } from '@prisma/client'
+import ThumbsUpButton from '@/components/CardPost/ThumbsUpButton'
 
-export interface Post {
-  id: string
-  cover: string
-  title: string
-  body: string
-  slug: string
-  markdown: string
-  author: {
-    username: string
-    avatar: string
-    id: string
-  }
+export interface PostWithAuthor extends Post {
+  author: User
 }
 
 interface CardPostProps {
-  post: Post
+  post: PostWithAuthor
   detailsCard?: boolean
 }
 
 const CardPost = ({ post, detailsCard = false }: CardPostProps) => {
+  const submitThumbsUp = incrementThumbsUp.bind(null, post)
+
   return (
     <article
       className={`bg-[#171D1F] rounded-2xl ${detailsCard ? 'max-w-[993px]' : 'max-w-[486px]'}`}>
@@ -51,7 +46,13 @@ const CardPost = ({ post, detailsCard = false }: CardPostProps) => {
         )}
       </main>
 
-      <footer className="p-4 pt-0">
+      <footer className="p-4 pt-0 flex justify-between">
+        <div>
+          <form action={submitThumbsUp}>
+            <ThumbsUpButton />
+          </form>
+          <p className="text-[#878787] pt-1 text-center">{post.likes}</p>
+        </div>
         <Avatar
           userName={post.author.username}
           imgSrc={post.author.avatar}
