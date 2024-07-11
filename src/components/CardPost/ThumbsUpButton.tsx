@@ -5,16 +5,13 @@ import { useFormStatus } from 'react-dom'
 import Image from 'next/image'
 import IconButton from '@/components/IconButton'
 import Spinner from '@/components/Spinner'
-import { Suspense } from 'react'
 
 const ThumbsUpButton = () => {
   const { pending } = useFormStatus()
   return (
     <IconButton disabled={pending}>
       {pending ? (
-        <Suspense>
-          <Spinner />
-        </Suspense>
+        <Spinner />
       ) : (
         <Image
           src="/thumbs.svg"
