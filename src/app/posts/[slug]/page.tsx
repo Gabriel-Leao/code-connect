@@ -12,7 +12,13 @@ const getPost = async (
   try {
     const post = await prisma.post.findUniqueOrThrow({
       where: { slug },
-      include: { author: true, comments: { include: { author: true } } }
+      include: {
+        author: true,
+        comments: {
+          include: { author: true, children: { include: { author: true } } },
+          where: { parent_id: null }
+        }
+      }
     })
     logger.info(`post com o slug: ${slug} encontrado com sucessor`)
     const processedContent = await remark().use(html).process(post.markdown)

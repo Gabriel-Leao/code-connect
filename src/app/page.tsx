@@ -25,7 +25,7 @@ const getPosts = async (page: number, searchTerm: string) => {
       where,
       take,
       skip,
-      include: { author: true, comments: true },
+      include: { author: true, comments: { where: { parent_id: null } } },
       orderBy: { created_at: 'desc' }
     })
     logger.info('Posts encontrados com sucesso')

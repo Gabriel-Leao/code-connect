@@ -6,7 +6,7 @@ interface commentListProps {
 
 const CommentList = ({ comments }: commentListProps) => {
   return (
-    <ul>
+    <ul className="flex flex-col gap-y-4">
       {comments.map((comment: commentWithAuthor) => (
         <li key={comment.id}>
           <Comment comment={comment} />
