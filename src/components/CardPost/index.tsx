@@ -2,15 +2,17 @@ import Image from 'next/image'
 import Avatar from '@/components/Avatar'
 import Link from 'next/link'
 import { incrementThumbsUp } from '@/actions'
-import { Post, User } from '@prisma/client'
+import { Comment, Post, User } from '@prisma/client'
 import ThumbsUpButton from '@/components/CardPost/ThumbsUpButton'
+import ModalComment from '@/components/ModalComment'
 
-export interface PostWithAuthor extends Post {
+export interface PostWithAuthorAndComments extends Post {
   author: User
+  comments: Comment[]
 }
 
 interface CardPostProps {
-  post: PostWithAuthor
+  post: PostWithAuthorAndComments
   detailsCard?: boolean
 }
 
@@ -47,11 +49,17 @@ const CardPost = ({ post, detailsCard = false }: CardPostProps) => {
       </main>
 
       <footer className="p-4 pt-0 flex justify-between">
-        <div>
+        <div className="flex gap-x-4">
           <form action={submitThumbsUp}>
             <ThumbsUpButton />
+            <p className="text-[#878787] pt-1 text-center">{post.likes}</p>
           </form>
-          <p className="text-[#878787] pt-1 text-center">{post.likes}</p>
+          <div>
+            <ModalComment />
+            <p className="text-[#878787] pt-1 text-center">
+              {post.comments.length}
+            </p>
+          </div>
         </div>
         <Avatar
           userName={post.author.username}

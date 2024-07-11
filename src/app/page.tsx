@@ -1,4 +1,4 @@
-import CardPost, { PostWithAuthor } from '@/components/CardPost'
+import CardPost, { PostWithAuthorAndComments } from '@/components/CardPost'
 import logger from '@/logger'
 import Link from 'next/link'
 import prisma from '../../prisma/prisma'
@@ -25,7 +25,7 @@ const getPosts = async (page: number, searchTerm: string) => {
       where,
       take,
       skip,
-      include: { author: true },
+      include: { author: true, comments: true },
       orderBy: { created_at: 'desc' }
     })
     logger.info('Posts encontrados com sucesso')
@@ -49,7 +49,7 @@ const Home = async ({
       {posts.length ? (
         <>
           <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 pb-14">
-            {posts.map((post: PostWithAuthor) => (
+            {posts.map((post: PostWithAuthorAndComments) => (
               <CardPost
                 post={post}
                 key={post.id}

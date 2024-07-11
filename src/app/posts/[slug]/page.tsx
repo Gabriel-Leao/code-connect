@@ -1,15 +1,17 @@
-import CardPost, { PostWithAuthor } from '@/components/CardPost'
+import CardPost, { PostWithAuthorAndComments } from '@/components/CardPost'
 import logger from '@/logger'
 import prisma from '../../../../prisma/prisma'
 import { remark } from 'remark'
 import html from 'remark-html'
 import { redirect } from 'next/navigation'
 
-const getPost = async (slug: string): Promise<PostWithAuthor | null> => {
+const getPost = async (
+  slug: string
+): Promise<PostWithAuthorAndComments | null> => {
   try {
     const post = await prisma.post.findUniqueOrThrow({
       where: { slug },
-      include: { author: true }
+      include: { author: true, comments: true }
     })
     logger.info(`post com o slug: ${slug} encontrado com sucessor`)
     const processedContent = await remark().use(html).process(post.markdown)
