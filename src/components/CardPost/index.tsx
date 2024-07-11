@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Avatar from '@/components/Avatar'
 import Link from 'next/link'
-import { incrementThumbsUp } from '@/actions'
+import { incrementThumbsUp, postComment } from '@/actions'
 import { Comment, Post, User } from '@prisma/client'
 import ThumbsUpButton from '@/components/CardPost/ThumbsUpButton'
 import ModalComment from '@/components/ModalComment'
@@ -18,6 +18,7 @@ interface CardPostProps {
 
 const CardPost = ({ post, detailsCard = false }: CardPostProps) => {
   const submitThumbsUp = incrementThumbsUp.bind(null, post)
+  const submitComment = postComment.bind(null, post)
 
   return (
     <article
@@ -55,7 +56,7 @@ const CardPost = ({ post, detailsCard = false }: CardPostProps) => {
             <p className="text-[#878787] pt-1 text-center">{post.likes}</p>
           </form>
           <div>
-            <ModalComment />
+            <ModalComment action={submitComment} />
             <p className="text-[#878787] pt-1 text-center">
               {post.comments.length}
             </p>
