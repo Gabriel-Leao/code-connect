@@ -5,6 +5,7 @@ import Image from 'next/image'
 
 const ModalButton = (props: IconButtonProps) => {
   const { pending } = useFormStatus()
+
   return (
     <button
       {...props}

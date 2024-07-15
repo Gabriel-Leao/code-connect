@@ -6,6 +6,7 @@ import Image from 'next/image'
 const SearchInput = () => {
   const searchParams = useSearchParams()
   const searchTerm = searchParams.get('q') || ''
+
   return (
     <form
       className="relative"

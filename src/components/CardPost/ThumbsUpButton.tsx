@@ -8,6 +8,7 @@ import Spinner from '@/components/Spinner'
 
 const ThumbsUpButton = () => {
   const { pending } = useFormStatus()
+
   return (
     <IconButton disabled={pending}>
       {pending ? (
